@@ -28,7 +28,7 @@ pipeline {
                     test -f index.html
                     test -f style.css
                     test -f script.js
-                    test -f Dockerfile
+                    test -f dockerfile
 
                     echo "All required files exist!"
                 '''
