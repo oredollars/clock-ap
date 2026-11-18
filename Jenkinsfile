@@ -16,16 +16,25 @@ pipeline {
             }
         }
 
-        stage('Validate Files') {
-            steps {
-                echo 'Checking application files...'
+stage('Validate Files') {
+    steps {
+        echo 'Checking application files...'
 
-                sh '''
-                    test -f index.html
-                    test -f style.css
-                    test -f script.js
-                    test -f Dockerfile
-                '''
+        sh '''
+            set -eux
+
+            pwd
+            ls -la
+
+            test -f index.html
+            test -f style.css
+            test -f script.js
+            test -f Dockerfile
+
+            echo "All required files exist!"
+        '''
+    }
+}
             }
         }
 
