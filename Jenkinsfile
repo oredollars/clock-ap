@@ -4,7 +4,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'oredollar/clock-app'
-        DOCKER_CREDENTIALS = 'dockerhub-credentials'
+        DOCKER_CREDENTIALS = 'dockerhub'
     }
 
     stages {
